@@ -1,0 +1,11 @@
+.idea
+db.sqlite3
+static_in_env
+# Python bytecode:
+*.py[co]
+
+# Packaging files:
+*.egg*
+
+# Sphinx docs:
+build
