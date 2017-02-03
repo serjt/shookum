@@ -1,6 +1,7 @@
 .idea
 db.sqlite3
 static_in_env
+
 # Python bytecode:
 *.py[co]
 
