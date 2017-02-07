@@ -19,14 +19,17 @@ from django.conf.urls.static import static
 from django.conf import settings
 from tastypie.api import Api
 from subscribe.api import *
+from saresep.api import SaresepResource
 v1 = Api(api_name='v1')
 
 v1.register(FileResource())
+v1.register(SaresepResource())
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/',include(v1.urls)),
     url(r'^api/subscribe/','subscribe.views.post'),
+    url(r'^api/saresep/subscribe/','saresep.views.post'),
     url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.STATIC_ROOT}),
     url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.MEDIA_ROOT}),
 ]
