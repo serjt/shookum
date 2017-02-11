@@ -11,6 +11,6 @@ def post(request):
     subscribe = Subscribe.objects.create(name=name, phone_number=phone_number)
     subscribe.save()
     e = EmailMessage('Подписка', ('Имя: '+str(name) + ", Тел: " + str(phone_number)),
-                     from_email='tanaki.93@gmail.com', to=['tanaki.93@gmail.com'])
+                     from_email='tanaki.93@gmail.com', to=['testandsucces.93@gmail.com'])
     e.send()
     return JsonResponse(dict(result='thanks'))
