@@ -4,5 +4,5 @@ from .models import *
 
 class SaresepResource(ModelResource):
     class Meta:
-        queryset = File.objects.all()
+        queryset = File.objects.order_by('date')
         resource_name = 'saresep/files'
